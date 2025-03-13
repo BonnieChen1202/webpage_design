@@ -1,0 +1,48 @@
+/* 全局样式 */
+body {
+    background-color: #e6aa8e; /* 示例颜色：浅蓝色 */
+    margin: 0; /* 移除默认边距 */
+    margin-bottom:-50px;
+    padding: 0; /* 移除默认内边距 */
+}
+
+/* 容器样式 */
+/* .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.main_image {
+    margin-top: -50px; /* 向上移动 50px */
+    margin-left:-50px;
+    margin-right:-50px;
+}
+
+/* 导航栏样式 */
+.selection {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: rgba(165, 110, 42, 0.912);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.selection a {
+    margin: 0 50px; /* 选项之间的间距 */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+/* 内容区域样式 */
+.content {
+    margin-top: 60px; /* 为导航栏留出空间 */
+    padding: 20px;
+}

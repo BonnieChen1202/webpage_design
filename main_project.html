@@ -14,6 +14,97 @@
                 display:flex;
                 justify-content: space-between;
             }
+            .main img{
+                width:45%;
+                height:100%;
+                object-fit:cover;
+            }
+            .main .main_right{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 19px;
+                color:rgb(116, 48, 17);
+                width:1000%;
+                padding:30px;
+            }
+            /*根深蒂固四个字*/
+            .main .main_right .msg{
+                width:230px;
+                height:50px;
+                line-height:50px;
+                text-align:center;
+                font-size:23px;
+                color:rgb(113, 15, 15);
+                background-color:rgb(215, 142, 94);
+                margin-bottom:30px;
+            }
+            
+
+            .city-feature{
+                width:100%;
+                height:850px;
+                display:flex;
+                justify-content:space-between;
+                padding:10px 1%;
+                margin-bottom:10px;
+            }
+
+            .city-feature img{
+                width:25%;
+                height:700px;
+                margin:10px;
+            }
+
+            .city-feature img:hover{
+                transition:all 0.3s;
+                box-shadow:6px 4px 6px slategray;
+                cursor:pointer;
+                transform:rotateZ(3deg);
+                border:20px solid white;
+            }
+
+            .city-features{
+                width:100%;
+                height:850px;
+                display:flex;
+                justify-content:space-between;
+                padding:10px 1%;
+                margin-bottom:10px;
+            }
+            .city-features img{
+                width:25%;
+                height:700px;
+                margin:10px;
+            }
+            .city-features img:hover{
+                transition:all 0.3s;
+                box-shadow:6px 4px 6px slategray;
+                cursor:pointer;
+                transform:rotateZ(3deg);
+                border:20px solid white;
+            }
+            .introduce{
+                width:100%;
+                height:500px;
+                margin-top: 20px;
+                background-color: rgb(243, 205, 195);
+                display:flex;
+                justify-content: space-between;
+            }
+
+            .introduce img{
+                width:45%;
+                height:100%;
+                object-fit:cover;
+            }
+
+            .introduce .introduce_left{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 26px;
+                color:rgb(116, 48, 17);
+                width:1000%;
+                padding:30px;
+            }
+            
         </style>
     </head>
     <body>
@@ -26,19 +117,63 @@
             <a href="#contact">联系我们</a>
         </div>
 
-        
+        <div class="content">
+            <div class="tl">
+                <img src="first.jpg" alt="picture1">
+                <img src="second.jpg" alt="picture2">
+                <img src="third.jpg" alt="picture3">
+                <img src="forth.jpg" alt="picture4">
+            </div>
+        </div>
         
 
         <div class="content">
-            <img src="background.png" alt="Pulpit rock" class="main_image"  width="1520" height="450">
-            <div class="title">美丽河南</div>
-            <h1>欢迎来到美丽河南</h1>
-            <p>河南是一个美丽的地方，这里有着丰富的文化和历史，有着美丽的风景和人文景观。</p>
-            <p>我们是一家专门从事河南文化推广的公司，我们致力于让更多的人了解河南，爱上河南。</p>
-            <p>我们的产品有着丰富的文化内涵，是您了解河南的最佳选择。</p>
-            <p>我们的团队有着丰富的经验，我们将竭诚为您服务。</p>
-            <div class="main">
-
+            <div class="title-container">
+                <span class="brown-bar"></span>
+                <h2>风韵河南</h2>
             </div>
+
+            <div class="main">
+                <img src="background.png"  class="main_left">
+                <div class="main_right">
+                    <div class="msg">根深蒂固</div>
+                    <p>中原大地，沃野千里，河南，这片承载着华夏文明根脉的土地，宛如一部厚重的史书，在岁月的流转中书写着中华民族的辉煌篇章。从远古洪荒到盛世繁华，从黄河奔腾到嵩岳巍峨，这里的一草一木、一砖一瓦都浸润着深厚的历史底蕴与独特的文化风韵。</p>
+                    <p>这里是中华文明的摇篮，是“最早的中国”的发源地。仰韶彩陶绘出先民对生活的热爱，二里头遗址揭开夏王朝神秘的面纱；殷墟甲骨文镌刻下汉字最初的足迹，诉说着商代青铜器的恢弘壮丽。洛阳城下的汉魏故都，开封街巷中的宋韵遗梦，无不彰显着昔日帝都的雄浑气象。十三朝古都的荣耀，见证了无数帝王将相的兴衰成败，也孕育了灿若星辰的思想和艺术瑰宝。</p>
+                    <p>风过中原，拂去的是尘埃，留下的是永恒的记忆。河南，这方饱经沧桑却始终焕发青春的土地，像一位历经风雨依然挺立的长者，用她的博大胸怀滋养了一代又一代中华儿女。她告诉我们，历史并非冰冷的过去，而是一种鲜活的力量，它穿越时空，启迪未来。</p>
+                </div>
+                
+            </div> 
+        </div>   
+        <div class="image-container">
+            <div class="title">文旅特色</div>
+        <div class="city-feature">
+            <img src="luoyang.jpeg" alt="luoyang">
+            <img src="kaifeng.jpeg" alt="kaifeng">
+            <img src="zhengzhou.jpeg" alt="zhengzhou">
+            <img src="anyang.jpeg" alt="nanyang">
+        </div>
+        <div class="city-features">
+            <img src="xuchang.jpeg" alt="xuchang">
+            <img src="xinyang.jpeg" alt="xinyang">
+            <img src="tupian.jpeg" alt="tupian">
+            <img src="tupian2.jpeg" alt="tupian2">
+        </div>
+        </div>
+        
+
+        <div class="introduce">
+            <div class="introduce_left">
+                <p>河南不仅有历史的厚重，更有文化的灵动。少林武术刚柔并济，以禅武合一闻名天下；豫剧高亢激昂，唱腔婉转间道尽人间百态。清明上河园再现北宋市井繁华，《洛神赋》吟诵出曹植笔下的浪漫情思。龙门石窟千佛静默，凝固了佛教东传的壮丽画卷；太行山麓云雾缭绕，孕育了诗意般的山水情怀。无论是舌尖上的胡辣汤，还是指尖上的朱仙镇木版年画，它们都是河南人民智慧的结晶，也是中原文化绵延不绝的生命力所在。</p>
+                <p>当夕阳洒满黄河两岸，当晨钟暮鼓回荡于古刹之间，我们仿佛听到了历史深处的低语，那是河南在向世界展示她无尽的魅力与风韵。走进河南，便是走进了一段波澜壮阔的历史长卷；读懂河南，便能触摸到中华文化最深沉的灵魂。</p>
+            </div>
+            <img src="shuilian.png" class="introduce_right">
+        </div>
+
+
+        <div class="footer">
+                风韵河南 @ 版权所有 2025
+        </div>   
+               
+            
     </body>
 </html>

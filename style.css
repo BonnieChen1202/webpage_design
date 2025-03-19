@@ -1,12 +1,13 @@
 @charset "UTF-8";
 /* 全局样式 */
+/*整体的背景颜色*/
 body {
     background-color: #e6aa8e; 
     margin: 0; /* 移除默认边距 */
     margin-bottom:0px;
     padding: 0; /* 移除默认内边距 */
+    min-height: 100vh; /* 视口高度 */
 }
-
 
 .main_image {
     margin-top: -50px; /* 向上移动 50px */
@@ -14,29 +15,33 @@ body {
     margin-right:-50px;
 }
 
-/* 导航栏样式 */
-.selection {
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    background-color: rgba(165, 110, 42, 0.912);
-    padding: 10px 0;
+/* 导航栏样式父 */
+.navbar {
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
+    background-color: rgba(165, 110, 42, 0.912);
     z-index: 1000;
+}
+/* 导航栏样式子*/
+
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .selection a {
-    margin: 0 50px; /* 选项之间的间距 */
+    margin: 0 50px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 16px;
 }
 
 
 
-/* CSS 轮播图 */
+/* 首页轮播图 */
 .content{
     width:2000px;
     height:600px;
@@ -74,14 +79,14 @@ img{
     display:flex;
     align-items: center;
 }
-
+/*棕色竖条规格*/
 .brown-bar{
     width:20px;
     height:40px;
     background-color:brown;
     margin-right:20px;
 }
-
+/*风韵河南四个字*/
 h2{
     font-size:40px;
     color:brown;
@@ -92,6 +97,7 @@ h2{
     flex-direction: column;
     align-items: center; /* 水平居中 */
 }
+/*文旅特色四个字*/
 .title{
     width:40%;
     height:50px;
@@ -100,6 +106,7 @@ h2{
     text-align:center;
     font-size:40px;
 }
+/*文旅特色前后的-----*/
 .title::after{
     content:'——————';
     margin-left:10px;
@@ -108,6 +115,7 @@ h2{
     content:'——————';
     margin-right:10px;
 }
+
 .footer{
     width:100%;
     height:50px;

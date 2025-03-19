@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initialscale=1.0">
-        <title>新闻</title>
-        <link rel="stylesheet" href="style.css">
-        <style>
+<html lang="zh-CN">
 
-        </style>
-
-        
 <head>
-    <body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>河南传统文化新闻</title>
+  <link rel="stylesheet" href="news.css">
+</head>
 
+<body>
+  <!-- 头部导航 -->
+  <header>
+    <h1>河南传统文化新闻</h1>
+    <nav>
+      <ul>
+        <li><a href=" " data-category="all">全部</a ></li>
+        <li><a href="#" data-category="yu-opera">豫剧文化</a ></li>
+        <li><a href="#" data-category="shaolin">少林武术</a ></li>
+        <li><a href="#" data-category="qingming">清明上河园</a ></li>
+      </ul>
+    </nav>
+  </header>
 
-    </body>
-</head>        
+  <!-- 新闻列表 -->
+  <section id="news-list">
+    <article class="news-item" data-category="yu-opera">
+      <h2><a href="#" class="news-title">豫剧经典剧目走进校园</a ></h2>
+      <p class="news-summary">近日，河南豫剧院携经典剧目走进多所校园，为学生们带来了一场精彩的传统文化盛宴，让更多年轻人了解和喜爱豫剧。</p >
+      <p class="news-date">2025-03-10</p >
+    </article>
+    <article class="news-item" data-category="shaolin">
+      <h2><a href="#" class="news-title">少林武术海外交流活动圆满成功</a ></h2>
+      <p class="news-summary">由少林寺武僧团组成的交流团队前往多个国家进行武术表演和文化交流，展示了少林武术的魅力，增进了中外文化的交流。</p >
+      <p class="news-date">2025-03-05</p >
+    </article>
+    <article class="news-item" data-category="qingming">
+      <h2><a href="#" class="news-title">清明上河园举办大型宋代文化节</a ></h2>
+      <p class="news-summary">开封清明上河园举办了盛大的宋代文化节，再现了北宋时期的繁华景象，吸引了众多游客前来体验。</p >
+      <p class="news-date">2025-02-28</p >
+    </article>
+  </section>
+
+  <!-- 新闻详情 -->
+  <section id="news-detail" style="display: none;">
+    <h2 id="detail-title"></h2>
+    <p id="detail-summary"></p >
+    <p id="detail-date"></p >
+    <button id="back-to-list">返回新闻列表</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

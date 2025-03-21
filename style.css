@@ -2,7 +2,7 @@
 /* 全局样式 */
 /*整体的背景颜色*/
 body {
-    background-color: #e6aa8e; 
+    background-color: rgb(255, 201, 135); 
     margin: 0; /* 移除默认边距 */
     margin-bottom:0px;
     padding: 0; /* 移除默认内边距 */
@@ -23,8 +23,23 @@ body {
     background-color: rgba(165, 110, 42, 0.912);
     z-index: 1000;
 }
-/* 导航栏样式子*/
+.navbar a {
+    width:10%;
+    height: 100%;
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.navbar a.active{
+    background-color: rgba(91, 58, 19, 0.912);
+    height: 30px;
+}
 
+/* 导航栏样式子*/
 .selection {
     display: flex;
     justify-content: center;
@@ -41,31 +56,33 @@ body {
 
 
 
-/* 首页轮播图 */
+/* 轮播图样式 */
 .content{
-    width:2000px;
+    width: 1500px;
     height:600px;
-    margin:0px;
-    overflow:hidden;/*隐藏溢出的部分*/
+    margin: 0px auto;
+    overflow: hidden;
 }
 
 .tl{
-    width:8000px;
+    width:6000px;
     height:600px;
-    animation:move 10s infinite;
-
+    animation: move 10s infinite;
 }
-/*轮播图的图片*/
+
 img{
-    width:2000px;
+    width:1500px;
     height:600px;
     float:left;/*左浮动*/
 }
+
 /*平滑动画调整*/
-@keyframes move{0%,22%{margin-left:0px;}
-30%,52%{margin-left:-2000px;}
-60%,82%{margin-left:-4000px;}
-90%,100%{margin-left:-6000px;}}
+@keyframes move {
+    0%, 25% { margin-left: 0px; }
+    25%, 50% { margin-left: -1500px; }
+    50%, 75% { margin-left: -3000px; }
+    75%, 100% { margin-left: -4500px; }
+}
 
 
 /*导航栏与轮播图之间 */
@@ -95,25 +112,22 @@ h2{
 .image-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 水平居中 */
+    align-items: left;
 }
+
 /*文旅特色四个字*/
-.title{
-    width:40%;
-    height:50px;
-    line-height:50px;
-    margin:10px auto;
-    text-align:center;
+
+/*标题棕色*/
+.image-container{
+    display:flex;
+    align-items: left;
+}
+
+/*文旅特色四个字*/
+h3{
     font-size:40px;
-}
-/*文旅特色前后的-----*/
-.title::after{
-    content:'——————';
-    margin-left:10px;
-}
-.title::before{
-    content:'——————';
-    margin-right:10px;
+    color:brown;
+    padding-left: 130px;/*前面空白长度*/
 }
 
 .footer{

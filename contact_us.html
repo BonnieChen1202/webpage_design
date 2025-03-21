@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - 风韵河南</title>
+    <title>联系我们-豫见河南</title>
     <link rel="stylesheet" href="style.css"> <!-- 基础样式 -->
-    <link rel="stylesheet" href="contact_us.css"> <!-- 模块样式 -->
+    <style>
+        /* 表单容器样式 */
+        .main_picture{
+            width:1500px;
+            height:600px;
+            margin:0px auto;
+        }
+        .header-image img{
+            width:1500px;
+            height:600px;
+        }
+        .contact-form {
+            background-color: rgb(243, 205, 195);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 50px auto 100px; /* 顶部留出导航栏空间 */
+            box-sizing: border-box;
+            min-height: 300px; /* 确保表单区域高度足够 */
+        }
+        .contact-form h2 {
+            color: #e05d5d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 修改表单项布局为行内水平排列 */
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        label {
+            width: 15%; /* 为标签分配固定宽度 */
+            font-weight: bold;
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        .required {
+            color: rgba(198, 80, 37, 0.919);
+        }
+
+        /* 修改输入框宽度和样式 */
+        input, textarea {
+            width: 70%; /* 保持原来的宽度 */
+            padding: 10px;
+            border: 1px solid #e7c7c7;
+            border-radius: 4px;
+        }
+
+        /* 特别控制留言框的高度 */
+        textarea {
+            height: 120px; /* 控制文本区域的高度 */
+        }
+
+        /* 调整按钮位置 */
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #e05d5d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #e05d5d; /* 添加文字颜色变化以提高可见度 */
+            border: 1px solid #e05d5d; /* 添加边框 */
+        }
+
+        .form-feedback {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+    
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -20,31 +107,41 @@
     </div>
 
     <!-- 头部图片 -->
-    <div class="header-image">
-        <img src="contact_us_picture.jpeg" alt="contact_us_picture" class="contact_us_picture">
-    </div>
-
+     <div class="main_picture">
+        <div class="header-image">
+            <img src="contact_us_picture.jpg" alt="contact_us_picture">
+        </div>
+     </div>
+    
     <!-- 表单内容 -->
     <div class="contact-form">
         <h2>在线留言</h2>
         <form>
-            <label for="name">昵称 <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
+            <div class="form-group">
+                <label for="name">昵称 <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-            <label for="email">邮箱 <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email">邮箱 <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-            <label for="message">留言</label>
-            <textarea id="message" name="message" placeholder="有什么问题请留言，我们会尽快给您回复" required></textarea>
+            <div class="form-group">
+                <label for="message">留言</label>
+                <textarea id="message" name="message" placeholder="有什么问题请留言，我们会尽快给您回复" required></textarea>
+            </div>
 
-            <button type="submit">提交</button>
-            <div class="form-feedback"></div> <!-- 提交反馈信息 -->
+            <div class="button-group">
+                <button type="submit">提交</button>
+                <div class="form-feedback"></div> <!-- 提交反馈信息 -->
+            </div>
         </form>
     </div>
 
     <!-- 底部 -->
     <div class="footer">
-        风韵河南 @ 版权所有 2025
+        豫见河南 @ 版权所有 2025 ---第2组
     </div>
 </body>
 </html>

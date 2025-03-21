@@ -1,18 +1,24 @@
 /* 表单容器样式 */
-.contact_us_picture{
-    margin-top: 0px;
+.main_picture{
+    width:1500px;
+    height:600px;
+    margin:0px auto;
+}
+.contact_us_picture img{
+    width:1500px;
+    height:600px;
 }
 .contact-form {
-    background-color: white;
+    background-color: rgb(168, 77, 68);
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
-    margin: 120px auto 40px; /* 顶部留出导航栏空间 */
+    margin: 50px auto 100px; /* 顶部留出导航栏空间 */
     box-sizing: border-box;
-    min-height: 600px; /* 确保表单区域高度足够 */
+    min-height: 300px; /* 确保表单区域高度足够 */
 }
 .contact-form h2 {
-    color: #4CAF50;
+    color: #fffcfc;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -24,19 +30,19 @@ label {
 }
 
 .required {
-    color: red;
+    color: rgba(198, 80, 37, 0.919);
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #e7c7c7;
     border-radius: 4px;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #e05d5d;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -49,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ffffff;
 }
 
 .form-feedback {
@@ -61,7 +67,16 @@ button:hover {
 }
 
 
-/* 其他样式 */
+/*页脚*/
 .footer {
-    position: relative; /* 避免使用 fixed 或 absolute */
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(165, 110, 42, 0.912); /* 改回棕色 */
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
 }

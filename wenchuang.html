@@ -1,47 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>河南甲骨文文化展示</title>
-  <link rel="stylesheet" href="wenchuang.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文创-豫见河南</title>
+    <link rel="stylesheet" href="style.css"> <!-- 基础样式 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", "SimHei", "STHeiti", sans-serif;
+            background-color: rgb(255, 201, 135);
+            color: #333;
+            overflow-x: hidden; /* 防止水平滚动条 */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1800px; /* 进一步增加容器宽度 */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* 移除滚动部分 */
+        .scroll-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px; /* 增加垂直内边距 */
+            box-sizing: border-box;
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* 进一步增加图片间距 */
+            margin-bottom: 50px;
+            width: 100%;
+            max-width: 1500px; /* 增加画廊最大宽度 */
+        }
+
+        .image-container {
+            width: 450px; /* 进一步放大图片容器 */
+            height: 450px; /* 进一步放大图片容器 */
+            margin-bottom: 25px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .text {
+            max-width: 1200px; /* 进一步放大文字容器 */
+            margin: 40px auto;
+            padding: 40px;
+            background-color: rgb(243, 205, 195);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 3.2em; /* 进一步放大标题 */
+            margin-bottom: 35px;
+            color: brown;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.12);
+        }
+
+        p {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.7em; /* 进一步放大段落文字 */
+            color:rgb(116, 48, 17);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+
+        .placeholder-img {
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        @media (max-width: 1500px) {
+            .image-container {
+                width: 400px;
+                height: 400px;
+            }
+            
+            h2 {
+                font-size: 2.8em;
+            }
+            
+            p {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .image-container {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 100%;
+                max-width: 350px;
+                height: 350px;
+            }
+            
+            h2 {
+                font-size: 2.4em;
+            }
+            
+            p {
+                font-size: 1.3em;
+            }
+        }
+    .footer{
+      width:100%;
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      background-color:rgba(165, 110, 42, 0.912);
+      font-size:20px;
+      color:white;
+}
+    </style>
 </head>
-
 <body>
-  <!-- 导航栏 -->
-  <header>
-    <h1>河南甲骨文文化探秘</h1>
-    <nav>
-      <ul>
-        <li><a href=" ">首页</a ></li>
-        <li><a href="#">关于甲骨文</a ></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- 甲骨文展示区 -->
-  <main>
-    <div class="oracle-bone-character" id="character1">
-      <span>日</span>
-      <p class="meaning">表示太阳，是最早的象形文字之一。</p >
+    <!-- 导航栏 - 保留原样 -->
+    <div class="navbar">
+        <div class="selection">
+            <a href="main_project.html">首页</a>
+            <a href="tansuo.html">探索</a>
+            <a href="wenchuang.html" class="active">文创</a>
+            <a href="news.html">新闻</a>
+            <a href="contact_us.html">联系我们</a>
+        </div>
     </div>
-    <div class="oracle-bone-character" id="character2">
-      <span>月</span>
-      <p class="meaning">代表月亮，形状像弯弯的月牙。</p >
-    </div>
-    <div class="oracle-bone-character" id="character3">
-      <span>人</span>
-      <p class="meaning">描绘了一个侧面站立的人形。</p >
-    </div>
-  </main>
+    
+    <div class="container">
+        <div class="scroll-section">
+            <!-- 豫剧脸谱文创产品 -->
+            <div class="section">
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="yuju5.jpg" alt="豫剧脸谱1" onerror="this.src='https://via.placeholder.com/450x450/e91e63/ffffff?text=豫剧脸谱'; this.alt='豫剧脸谱';">
+                    </div>
+                    <div class="image-container">
+                        <img src="yuju4.jpg" alt="豫剧脸谱2" onerror="this.src='https://via.placeholder.com/450x450/9c27b0/ffffff?text=豫剧脸谱'; this.alt='豫剧脸谱';">
+                    </div>
+                    <div class="image-container">
+                        <img src="yuju6.jpg" alt="豫剧脸谱3" onerror="this.src='https://via.placeholder.com/450x450/673ab7/ffffff?text=豫剧脸谱'; this.alt='豫剧脸谱';">
+                    </div>
+                </div>
+                <div class="text">
+                    <h2>豫剧脸谱文创产品</h2>
+                    <p>豫剧是河南的传统戏曲艺术，脸谱是豫剧中的重要元素。豫剧脸谱冰箱贴以豫剧经典脸谱为原型，采用色彩鲜艳的陶瓷材质制作。一个个脸谱造型生动，或威武霸气，或诙谐幽默，将豫剧角色的性格特点展现得淋漓尽致。</p>
+                    <p>还有豫剧人物书签、豫剧主题拼图等文创产品，将豫剧脸谱与现代设计相结合，既保留了传统文化的精髓，又赋予了现代审美，让传统文化焕发新的活力，吸引更多年轻人了解和喜爱豫剧文化。以豫剧脸谱为原型，制作成各种精美的手办模型，可根据不同的角色和脸谱造型进行设计，还可以加入一些动态元素或发光效果，增加手办的趣味性和观赏性。</p>
+                </div>
+            </div>
 
-  <!-- 底部版权信息 -->
-  <footer>
-    <p>&copy; 2025 河南文化文创产品版权所有</p >
-  </footer>
+            <!-- 洛阳牡丹文创产品 -->
+            <div class="section">
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="mudan3.jpg" alt="洛阳牡丹1" onerror="this.src='https://via.placeholder.com/450x450/e91e63/ffffff?text=洛阳牡丹'; this.alt='洛阳牡丹';">
+                    </div>
+                    <div class="image-container">
+                        <img src="mudan4.jpg" alt="洛阳牡丹2" onerror="this.src='https://via.placeholder.com/450x450/9c27b0/ffffff?text=洛阳牡丹'; this.alt='洛阳牡丹';">
+                    </div>
+                </div>
+                <div class="text">
+                    <h2>洛阳牡丹文创产品</h2>
+                    <p>洛阳牡丹被誉为"花中之王"，是河南洛阳的象征。牡丹花茶精选洛阳优质牡丹花瓣，经特殊工艺炮制而成，泡上一杯，能让人在茶香中领略到牡丹的独特韵味。</p>
+                    <p>还有牡丹主题的冰箱贴、丝巾、笔记本和陶瓷工艺品，展现了牡丹的雍容华贵，让人们在日常生活中感受到自然的美好，同时传递洛阳城市的文化魅力，成为洛阳文化的有效传播媒介。</p>
+                </div>
+            </div>
 
-  <script src="script.js"></script>
+            <!-- 少林功夫文创产品 -->
+            <div class="section">
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="shaolinsi5.jpg" alt="少林功夫1" onerror="this.src='https://via.placeholder.com/450x450/e91e63/ffffff?text=少林功夫'; this.alt='少林功夫';">
+                    </div>
+                    <div class="image-container">
+                        <img src="shaolinsi3.jpg" alt="少林功夫2" onerror="this.src='https://via.placeholder.com/450x450/9c27b0/ffffff?text=少林功夫'; this.alt='少林功夫';">
+                    </div>
+                    <div class="image-container">
+                        <img src="shaolinsi2.jpg" alt="少林功夫3" onerror="this.src='https://via.placeholder.com/450x450/673ab7/ffffff?text=少林功夫'; this.alt='少林功夫';">
+                    </div>
+                </div>
+                <div class="text">
+                    <h2>少林功夫文创产品</h2>
+                    <p>少林功夫是中国武术的代表之一，起源于河南嵩山少林寺。少林功夫玩偶造型设计灵感源自少林武术动作，细节处理精致，激发人们对武术文化的兴趣。</p>
+                    <p>还有T恤、钥匙扣和书签等文创产品，展现了少林功夫的刚劲与灵动，适合所有热爱中国传统文化的人士。这些产品不仅承载着少林功夫的精神内涵，更成为河南文化的窗口，向世界展示着中国传统武术的独特魅力。基于区块链技术，发行少林功夫主题的数字藏品，如少林功夫的历史图片、武僧表演的视频片段、功夫动漫 IP 形象等，具有收藏和纪念价值。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        豫见河南 @ 版权所有 2025 ---第2组
+</div>   
 </body>
-
 </html>

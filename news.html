@@ -1,55 +1,204 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>河南传统文化新闻</title>
-  <link rel="stylesheet" href="news.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻-豫见河南</title>
+    <link rel="stylesheet" href="style.css"> <!-- 基础样式 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 201, 135);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #d32f2f;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            background-color: rgb(243, 205, 195);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-item iframe {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: brown;
+            font-family: "Microsoft YaHei", "SimHei", "STHeiti", sans-serif;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size:18px;
+            color: #555;
+            text-align: justify;
+            font-family: "Microsoft YaHei", "SimHei", "STHeiti", sans-serif;
+        }
+        
+        .media-placeholder {
+            width: 300px;
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .date {
+            text-align: right;
+            color: #888;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .news-item {
+                flex-direction: column;
+            }
+            
+            .news-item img, 
+            .news-item iframe,
+            .media-placeholder {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+    .footer{
+      width:100%;
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      background-color:rgba(165, 110, 42, 0.912);
+      font-size:20px;
+      color:white;
+}
+    </style>
 </head>
-
 <body>
-  <!-- 头部导航 -->
-  <header>
-    <h1>河南传统文化新闻</h1>
-    <nav>
-      <ul>
-        <li><a href=" " data-category="all">全部</a ></li>
-        <li><a href="#" data-category="yu-opera">豫剧文化</a ></li>
-        <li><a href="#" data-category="shaolin">少林武术</a ></li>
-        <li><a href="#" data-category="qingming">清明上河园</a ></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <div class="selection">
+        <a href="main_project.html">首页</a>
+        <a href="tansuo.html">探索</a>
+        <a href="wenchuang.html">文创</a>
+        <a href="news.html" class="active">新闻</a>
+        <a href="contact_us.html">联系我们</a>
+    </div>
+</div>
+        <div class="news-container">
+    </div>
+    
+    <div class="news-container">
+        <!-- 新闻1：豫剧文化 -->
+        <div class="news-item">
+            <img src="yuju1.jpg" alt="豫剧文化" onerror="this.outerHTML='<div class=\'media-placeholder\'>豫剧文化图片</div>'">
+            <div class="news-content">
+                <h2>豫剧文化焕发新生机</h2>
+                <p>豫剧作为河南的传统戏曲艺术，近年来在文化传承与创新中焕发出新的生机。河南省政府大力支持豫剧的推广，通过举办豫剧文化节、开设豫剧培训班等方式，吸引了大量年轻观众。同时，豫剧与现代科技的结合也取得了显著成果，例如通过虚拟现实技术让观众身临其境地感受豫剧的魅力。豫剧不仅在国内广受欢迎，还走出国门，成为中国文化对外交流的重要名片。</p>
+                <div class="date">2025年3月15日</div>
+            </div>
+        </div>
 
-  <!-- 新闻列表 -->
-  <section id="news-list">
-    <article class="news-item" data-category="yu-opera">
-      <h2><a href="#" class="news-title">豫剧经典剧目走进校园</a ></h2>
-      <p class="news-summary">近日，河南豫剧院携经典剧目走进多所校园，为学生们带来了一场精彩的传统文化盛宴，让更多年轻人了解和喜爱豫剧。</p >
-      <p class="news-date">2025-03-10</p >
-    </article>
-    <article class="news-item" data-category="shaolin">
-      <h2><a href="#" class="news-title">少林武术海外交流活动圆满成功</a ></h2>
-      <p class="news-summary">由少林寺武僧团组成的交流团队前往多个国家进行武术表演和文化交流，展示了少林武术的魅力，增进了中外文化的交流。</p >
-      <p class="news-date">2025-03-05</p >
-    </article>
-    <article class="news-item" data-category="qingming">
-      <h2><a href="#" class="news-title">清明上河园举办大型宋代文化节</a ></h2>
-      <p class="news-summary">开封清明上河园举办了盛大的宋代文化节，再现了北宋时期的繁华景象，吸引了众多游客前来体验。</p >
-      <p class="news-date">2025-02-28</p >
-    </article>
-  </section>
+        <!-- 新闻2：洛阳牡丹 -->
+        <div class="news-item">
+            <img src="mudan1.jpg" alt="洛阳牡丹" onerror="this.outerHTML='<div class=\'media-placeholder\'>洛阳牡丹图片</div>'">
+            <div class="news-content">
+                <h2>洛阳牡丹文化节盛大开幕</h2>
+                <p>每年春季，洛阳牡丹文化节都会吸引成千上万的游客前来观赏。今年的牡丹文化节以"花开盛世，文化传承"为主题，展示了洛阳牡丹的独特魅力。除了传统的牡丹花展，文化节还融入了现代元素，如牡丹主题的文创产品展销、牡丹艺术摄影大赛等。洛阳牡丹不仅是河南的文化象征，更是中国传统文化的重要组成部分。通过牡丹文化节，更多人了解了洛阳的历史与文化，推动了当地旅游业的发展。</p>
+                <div class="date">2025年3月12日</div>
+            </div>
+        </div>
 
-  <!-- 新闻详情 -->
-  <section id="news-detail" style="display: none;">
-    <h2 id="detail-title"></h2>
-    <p id="detail-summary"></p >
-    <p id="detail-date"></p >
-    <button id="back-to-list">返回新闻列表</button>
-  </section>
+        <!-- 新闻3：少林功夫 -->
+        <div class="news-item">
+            <img src="shaolinsi6.jpg" alt="少林功夫" onerror="this.outerHTML='<div class=\'media-placeholder\'>少林功夫图片</div>'">
+            <div class="news-content">
+                <h2>少林功夫入选世界非物质文化遗产</h2>
+                <p>少林功夫作为中国武术的代表之一，近日成功入选世界非物质文化遗产名录。少林功夫起源于河南嵩山少林寺，已有1500多年的历史。它不仅是一种武术技艺，更是一种文化传承和精神象征。近年来，少林寺通过举办国际武术交流活动、开设少林功夫培训班等方式，向世界推广少林文化。此次入选世界非物质文化遗产，标志着少林功夫的国际影响力进一步提升，也为河南文化的全球传播注入了新的动力。</p>
+                <div class="date">2025年3月8日</div>
+            </div>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- 新闻4：视频报道 -->
+        <div class="news-item">
+            <iframe src="https://www.bilibili.com/video/BV1XX4y167mV/" allowfullscreen onerror="this.outerHTML='<div class=\'media-placeholder\'>视频内容</div>'"></iframe>
+            <div class="news-content">
+                <h2>河南传统文化视频报道</h2>
+                <p>近日，河南电视台推出了一期关于河南传统文化的特别报道，深入探讨了豫剧、洛阳牡丹和少林功夫等文化瑰宝的传承与发展。报道中，记者走访了豫剧表演艺术家、洛阳牡丹种植基地和少林寺，展示了这些文化的独特魅力。通过视频报道，观众可以更直观地感受到河南传统文化的深厚底蕴和现代创新。点击视频，了解更多精彩内容！</p>
+                <div class="date">2025年3月5日</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        豫见河南 @ 版权所有 2025 ---第2组
+</div>  
 </body>
-
 </html>
